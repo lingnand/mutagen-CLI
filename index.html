@@ -1,0 +1,101 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <title>mutagen-CLI by lynnard</title>
+    <link rel="stylesheet" href="stylesheets/styles.css">
+    <link rel="stylesheet" href="stylesheets/pygment_trac.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+    <script src="javascripts/respond.js"></script>
+    <!--[if lt IE 9]>
+      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <!--[if lt IE 8]>
+    <link rel="stylesheet" href="stylesheets/ie.css">
+    <![endif]-->
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+
+  </head>
+  <body>
+      <div id="header">
+        <nav>
+          <li class="fork"><a href="https://github.com/lynnard/mutagen-CLI">View On GitHub</a></li>
+          <li class="downloads"><a href="https://github.com/lynnard/mutagen-CLI/zipball/master">ZIP</a></li>
+          <li class="downloads"><a href="https://github.com/lynnard/mutagen-CLI/tarball/master">TAR</a></li>
+          <li class="title">DOWNLOADS</li>
+        </nav>
+      </div><!-- end header -->
+
+    <div class="wrapper">
+
+      <section>
+        <div id="title">
+          <h1>mutagen-CLI</h1>
+          <p>Universal command line ID3 tagger built on top of mutagen</p>
+          <hr>
+          <span class="credits left">Project maintained by <a href="https://github.com/lynnard">lynnard</a></span>
+          <span class="credits right">Hosted on GitHub Pages &mdash; Theme by <a href="https://twitter.com/michigangraham">mattgraham</a></span>
+        </div>
+
+        <h1>
+<a name="mutagen-cli" class="anchor" href="#mutagen-cli"><span class="octicon octicon-link"></span></a>mutagen-CLI</h1>
+
+<p><a href="http://mutagen.lynnard.tk">mutagen-CLI</a> is a <a href="https://www.github.com/nex3/mutagen">mutagen</a> frontend that handles universal ID3 music tagging.</p>
+
+<h2>
+<a name="install" class="anchor" href="#install"><span class="octicon octicon-link"></span></a>Install</h2>
+
+<ol>
+<li>make sure you have <a href="https://www.github.com/nex3/mutagen">mutagen</a> installed</li>
+<li>copy the script somewhere accessible from your shell environment</li>
+</ol><h2>
+<a name="usage" class="anchor" href="#usage"><span class="octicon octicon-link"></span></a>Usage</h2>
+
+<pre><code>usage: Change or manipulate the ID3 tags of the audio files
+       [-h] [--artist ARTIST] [--album ALBUM] [--title TITLE] [--wors WORS]
+       [--year YEAR] [--cover COVER] [--format FORMAT] [--separator SEPARATOR]
+       [--escape ESCAPE]
+       audiofile [audiofile ...]
+
+positional arguments:
+  audiofile             an audio file containing the ID3 tags
+
+optional arguments:
+  -h, --help            show this help message and exit
+  --artist ARTIST, -a ARTIST
+                        set the artist name
+  --album ALBUM, -A ALBUM
+                        set the album name
+  --title TITLE, -t TITLE
+                        set the title name
+  --wors WORS, -r WORS  set the internet radio url
+  --year YEAR, -Y YEAR  set the release year
+  --cover COVER, -c COVER
+                        set the cover image
+  --format FORMAT, -f FORMAT
+                        return the ID3 information as a formatted string; the
+                        format string should containing one or more of the
+                        following specifiers: , {artist} , {title} , {album} ,
+                        {year} , {kbps} , {wors} , {len} (the length of the
+                        audio file, in seconds) , {path} (the absolute path of
+                        the file)
+  --separator SEPARATOR, -s SEPARATOR
+                        define the separator used to append at the end of the
+                        output for each file (excluding the last file)
+  --escape ESCAPE, -e ESCAPE
+                        define the characters that should be escaped in all
+                        the outputed fields
+    usage: Change or manipulate the ID3 tags of the audio files
+           [-h] [--artist ARTIST] [--album ALBUM] [--title TITLE] [--wors WORS]
+           [--year YEAR] [--cover COVER] [--format FORMAT] [--separator SEPARATOR]
+           [--escape ESCAPE]
+           audiofile [audiofile ...]
+</code></pre>
+      </section>
+
+    </div>
+    <!--[if !IE]><script>fixScale(document);</script><![endif]-->
+    
+  </body>
+</html>
