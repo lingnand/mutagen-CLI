@@ -8,13 +8,13 @@ from mutagen.mp3 import MP3, HeaderNotFoundError
 from mutagen.id3 import ID3, TPE1, TALB, TIT2, WORS, TDRL, APIC
 import argparse, re, os
 
-parser = argparse.ArgumentParser('Change or manipulate the ID3 tags of the audio files');
-parser.add_argument('--artist','-a', default='', help='set the artist name');
-parser.add_argument('--album','-A', default='', help='set the album name');
-parser.add_argument('--title','-t', default='', help='set the title name');
-parser.add_argument('--wors','-r', default='', help='set the internet radio url');
-parser.add_argument('--year','-Y', default='', help='set the release year');
-parser.add_argument('--cover','-c', default='', help='set the cover image');
+parser = argparse.ArgumentParser('Change or manipulate the ID3 tags of the audio files')
+parser.add_argument('--artist','-a', default='', help='set the artist name')
+parser.add_argument('--album','-A', default='', help='set the album name')
+parser.add_argument('--title','-t', default='', help='set the title name')
+parser.add_argument('--wors','-r', default='', help='set the internet radio url')
+parser.add_argument('--year','-Y', default='', help='set the release year')
+parser.add_argument('--cover','-c', default='', help='set the cover image')
 parser.add_argument('--format', '-f', default='', help='''return the ID3 information as a formatted string; 
                                                     the format string should containing one or more of the following specifiers:
                                                     , {artist}
@@ -24,10 +24,10 @@ parser.add_argument('--format', '-f', default='', help='''return the ID3 informa
                                                     , {kbps}
                                                     , {wors}
                                                     , {len} (the length of the audio file, in seconds)
-                                                    , {path} (the absolute path of the file)''');
-parser.add_argument('--separator','-s', default='\n', help='define the separator used to append at the end of the output for each file (excluding the last file)');
-parser.add_argument('--escape','-e', default='', help='define the characters that should be escaped in all the outputed fields');
-parser.add_argument('audiofile', nargs='+', help='an audio file containing the ID3 tags');
+                                                    , {path} (the absolute path of the file)''')
+parser.add_argument('--separator','-s', default='\n', help='define the separator used to append at the end of the output for each file (excluding the last file)')
+parser.add_argument('--escape','-e', default='', help='define the characters that should be escaped in all the outputed fields')
+parser.add_argument('audiofile', nargs='+', help='an audio file containing the ID3 tags')
 
 args = parser.parse_args()
 
@@ -140,7 +140,7 @@ for f in args.audiofile:
             u'path':path}
     if to_escape:
         for k in reps:
-            reps[k] = re.sub(escapepat, r'\\\1', u"%s" % reps[k]);
+            reps[k] = re.sub(escapepat, r'\\\1', u"%s" % reps[k])
 
     if formatstr != '':
         outputs.append(formatstr.format(**reps))
