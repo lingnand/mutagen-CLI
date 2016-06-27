@@ -4,10 +4,14 @@
 
 ## Install
 
-1. make sure you have [mutagen][mutagen] installed
-2. copy the script somewhere accessible from your shell environment
+Development version from Github:
+
+    pip install https://github.com/maphew/mutagen-CLI/archive/master.zip 
+
 
 ## Usage
+
+    $ mutagenc
 
     usage: Change or manipulate the ID3 tags of the audio files
            [-h] [--artist ARTIST] [--album ALBUM] [--title TITLE] [--wors WORS]
